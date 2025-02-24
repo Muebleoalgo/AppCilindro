@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import Models.Cilindro;
+
 public class MainActivity extends AppCompatActivity {
     EditText txtRadio, txtAltura;
     TextView lbVolumen;
@@ -37,8 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         double radio = Double.valueOf(txtRadio.getText().toString());
         double altura = Double.valueOf(txtAltura.getText().toString());
-        double volumen = Math.PI*(Math.pow(radio,2))*altura;
-        lbVolumen.setText(volumen+"");
+        Cilindro oC = new Cilindro(radio, altura);
     }
 
     private boolean validar() {
